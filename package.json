@@ -1,0 +1,38 @@
+{
+  "name": "scatter-loader",
+  "version": "1.0.0",
+  "description": "A webpack loader \u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Dpost loader to scatter the files beside webpack bundle",
+  "main": "index.js",
+  "scripts": {
+    "test": "test\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[Cnpm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaganathanb/scatter-loader.git"
+  },
+  "keywords": [
+    "webpack",
+    "loader",
+    "post",
+    "loader",
+    "scatter",
+    "files"
+  ],
+  "author": "Jaganathan B <jaganathan.eswaran@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jaganathanb/scatter-loader/issues"
+  },
+  "homepage": "https://github.com/jaganathanb/scatter-loader#readme",
+  "dependencies": {
+    "loader-utils": "^0.2.16",
+    "object-assign": "^4.1.0",
+    "path-is-absolute": "^1.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.12.2",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0",
+    "should": "^11.1.2"
+  }
+}
