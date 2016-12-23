@@ -13,7 +13,9 @@ module.exports = function(content) {
 	this.cacheable && this.cacheable();
 	var config = loaderUtils.getLoaderConfig(that, 'scatterLoader');
 
-	if (!isPathAbsolute.win32(config.outputPath || outputPath)) {
+	outputPath = config.outputPath || outputPath;
+
+	if (!isPathAbsolute.win32(outputPath) && fs.existsSync(outputPath)) {
 		throw new Error('Scatter Loader: outputPath should be absolute', 30, 'scatter-loader.js');
 	}
 
