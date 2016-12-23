@@ -2,9 +2,9 @@ var fs = require('fs'),
 	path = require('path'),
 	assign = require('object-assign'),
 	loaderUtils = require('loader-utils'),
-    isPathAbsolute = require('path-is-absolute');
+	isPathAbsolute = require('path-is-absolute');
 
-module.exports = function(content) {
+module.exports = function (content) {
 	var that = this,
 		fileParts = path.win32.parse(that.resource),
 		ext = ['.ts'].indexOf(fileParts.ext) >= 0 ? '.js' : fileParts.ext,
@@ -15,13 +15,16 @@ module.exports = function(content) {
 
 	outputPath = config.outputPath || outputPath;
 
-	if (!isPathAbsolute.win32(outputPath) && !fs.existsSync(outputPath)) {
+	if (isPathAbsolute.win32(outputPath) && fs.existsSync(outputPath)) {
+		fs[config.async ? 'writeFile' : 'writeFileSync'](path.join(config.outputPath || outputPath, fileParts.name + (config.ext || ext)), content, {
+			encoding: config.encoding,
+			mode: 7
+		}, function (err) {
+			if (err) throw err;
+		});
+	} else {
 		throw new Error('Scatter Loader: outputPath should be absolute', 30, 'scatter-loader.js');
 	}
-
-    fs[config.async ? 'writeFile' : 'writeFileSync'](path.join(config.outputPath || outputPath, fileParts.name + (config.ext || ext)), content, config.encoding || 'utf8', function(err) {
-		if (err) throw err;
-	});
 
 	return content;
 }
