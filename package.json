@@ -1,6 +1,6 @@
 {
   "name": "scatter-loader",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A webpack loader to save the typescript compiled files as individual files beside the webpack bundle.",
   "main": "index.js",
   "scripts": {
