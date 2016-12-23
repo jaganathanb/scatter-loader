@@ -1,10 +1,10 @@
 {
   "name": "scatter-loader",
-  "version": "1.0.0",
-  "description": "A webpack loader \u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Dpost loader to scatter the files beside webpack bundle",
+  "version": "1.0.1",
+  "description": "A webpack loader to save the typescript compiled files as individual files beside the webpack bundle.",
   "main": "index.js",
   "scripts": {
-    "test": "test\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[Cnpm test"
+    "test": "npm test"
   },
   "repository": {
     "type": "git",

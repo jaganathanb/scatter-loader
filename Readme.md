@@ -1,0 +1,1 @@
+A webpack loader to save the typescript compiled files as individual files beside the webpack bundle.
