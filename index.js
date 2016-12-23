@@ -15,7 +15,7 @@ module.exports = function(content) {
 
 	outputPath = config.outputPath || outputPath;
 
-	if (!isPathAbsolute.win32(outputPath) && fs.existsSync(outputPath)) {
+	if (!isPathAbsolute.win32(outputPath) && !fs.existsSync(outputPath)) {
 		throw new Error('Scatter Loader: outputPath should be absolute', 30, 'scatter-loader.js');
 	}
 
